@@ -5,6 +5,7 @@
 #' @param none
 #' @return nothing
 #' @keywords misc
+#' @export
 
 authenticate  <- function(){
 	aToken <- "220169719-uLcKYLzU1Np9F13xNPh4pr0ZKwPAASH56BkkygiY"
