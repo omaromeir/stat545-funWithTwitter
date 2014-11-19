@@ -4,9 +4,12 @@ Version: 0.1
 Authors@R: "Omar AlOmeir <omaromeir@gmail.com> [aut, cre]"
 Description: Query Twitter for a tweet using the tweet id. You can also embed a
     tweet into your Rmarkdown.
-Depends: R (>= 3.1.1)
-Imports: twitteR
+Depends:
+    R (>= 3.1.1)
+Imports:
+    twitteR
 License: CC0
 LazyData: true
-Suggests: knitr
+Suggests:
+    knitr
 VignetteBuilder: knitr
