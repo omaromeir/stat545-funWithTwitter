@@ -14,8 +14,21 @@
 #' @examples
 #' getTweet(id = "506900131086880768")
 
+# getTweet  <- function(id = "506900131086880768") {
+# 	authenticate()
+# 	tweet <- twitteR::showStatus(id)
+# 	paste0(tweet$screenName, ": ", tweet$text)
+# }
+
 getTweet  <- function(id = "506900131086880768") {
-	authenticate()
-	tweet <- twitteR::showStatus(id)
-	paste0(tweet$screenName, ": ", tweet$text)
+	sig <- authenticate()
+
+	req <- httr::GET(paste0("https://api.twitter.com/1.1/statuses/lookup.json?id=", id), sig)
+
+	tweet <- httr::content(req, "parsed")
+
+	screen_name <- tweet[[1]]$user$screen_name
+	tweet_text <- tweet[[1]]$text
+
+	paste0("@", screen_name, ": ", tweet_text)
 }
