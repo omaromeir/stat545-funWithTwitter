@@ -18,6 +18,7 @@ getTweet  <- function(id = "506900131086880768") {
 	sig <- authenticate()
 
 	req <- httr::GET(paste0("https://api.twitter.com/1.1/statuses/lookup.json?id=", id), sig)
+	httr::stop_for_status(req)
 
 	tweet <- httr::content(req, "parsed")
 
