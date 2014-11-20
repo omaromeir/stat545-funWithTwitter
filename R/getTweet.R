@@ -14,12 +14,6 @@
 #' @examples
 #' getTweet(id = "506900131086880768")
 
-# getTweet  <- function(id = "506900131086880768") {
-# 	authenticate()
-# 	tweet <- twitteR::showStatus(id)
-# 	paste0(tweet$screenName, ": ", tweet$text)
-# }
-
 getTweet  <- function(id = "506900131086880768") {
 	sig <- authenticate()
 
