@@ -1,19 +1,18 @@
 #' Authenticate with twitter api
 #'
-#' This function authenticates with the twitter api
+#' This function authenticates with the twitter api using the `httr` package.
 #'
 #' @param none
 #' @return oauth signature object to be used in future requests
 #' @keywords misc
 
-# 	cSecret <- "0qmh6lgMARSCuL2L2o2FUbjhoE1wCaR1jtL3KQtTQ48"
-# 	tSecret <- "SvXz1NRoCko7dpd4LZpPGilnPjLXnlJUA9nobSS00Xs"
-
 authenticate  <- function(){
-	myapp <- suppressMessages(httr::oauth_app("twitter", key = "9HAoJuJarZgSe46CtYoOg", secret = "0qmh6lgMARSCuL2L2o2FUbjhoE1wCaR1jtL3KQtTQ48"))
+	internet_connection()
+
+	myapp <- suppressMessages(httr::oauth_app("twitter", key = "NL0xDi3yXpa19Dm3vNJGsj4zR", secret = "Q26uYQpBE1Vt2HnlQNkjW0C3xFqlq4mJgLGsrI9ZoTvtULKFcN"))
 
 	sig <- httr::sign_oauth1.0(myapp,
-											 token = "220169719-uLcKYLzU1Np9F13xNPh4pr0ZKwPAASH56BkkygiY",
-											 token_secret = "SvXz1NRoCko7dpd4LZpPGilnPjLXnlJUA9nobSS00Xs")
+											 token = "2904949567-plGutDw278GUwi3luxG5tGNzoMtNWGvbpHiDoQS",
+											 token_secret = "upOZNTQEBraGg5ZJ2FAj3Bt55G4NgExbLWMbky0zx7zuH")
 
 }

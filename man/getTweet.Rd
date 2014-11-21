@@ -6,7 +6,7 @@
 getTweet(id = "506900131086880768")
 }
 \arguments{
-\item{id}{}
+\item{id}{a tweet's id}
 }
 \value{
 character string with the tweet text, and user name
@@ -15,12 +15,11 @@ character string with the tweet text, and user name
 This function returns a tweet's text, and the username
 }
 \details{
-This function solves a simple problem. You want to embed a tweet into your R markdown to impress
-your professor and your peers?
-You can do that by simply calling the functions from this package.
+This is a function to check a tweet from its id.
+Enter an id and the function will return the usename and text of the tweet.
 }
 \note{
-tweet id can be obtained from the link to a tweet. Example: "https://twitter.com/STAT545/status/506900131086880768"
+Tweet id can be obtained from the link to a tweet. Example: "https://twitter.com/STAT545/status/506900131086880768"
 }
 \examples{
 getTweet(id = "506900131086880768")

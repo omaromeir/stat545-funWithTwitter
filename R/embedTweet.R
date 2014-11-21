@@ -6,27 +6,34 @@
 #' your professor and your peers?
 #' You can do that by simply calling the functions from this package.
 #'
-#' @param id
-#' @return string html object with a tweet's text, username, and user avatar
+#' @param id a tweet's id
+#' @return prints a tweet html object to be embedded in R markdown.
 #' @keywords misc
-#' @note tweet id can be obtained from the link to a tweet. Example: "https://twitter.com/STAT545/status/506900131086880768"
+#' @note Tweet id can be obtained from the link to a tweet. Example: "https://twitter.com/STAT545/status/506900131086880768". The markdown chunk must have results = 'asis'.
 #' @export
 #' @examples
 #' embedTweet(id = "506900131086880768")
 
 embedTweet  <- function(id = "506900131086880768") {
+	# Would return NA if id contains a non-numeric value
+	stopifnot(!is.na(as.numeric(id)))
+
 	sig <- authenticate()
 
+	# Call the twitter api
 	req <- httr::GET(paste0("https://api.twitter.com/1.1/statuses/lookup.json?id=", id), sig)
+	# stop if you encounter any well known http error, example: 404
 	httr::stop_for_status(req)
 
+	# Get the content of the http response in a list
 	tweet <- httr::content(req, "parsed")
 
 	screen_name <- tweet[[1]]$user$screen_name
 	tweet_text <- tweet[[1]]$text
 	profile_image <- tweet[[1]]$user$profile_image_url
 
-	cat("<style>
+	# Print the internal style and html of the tweet
+ 	cat("<style>
 			#tweet {
 			border: 1px solid;
 			border-color: #9f9f9f;

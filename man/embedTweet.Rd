@@ -6,10 +6,10 @@
 embedTweet(id = "506900131086880768")
 }
 \arguments{
-\item{id}{}
+\item{id}{a tweet's id}
 }
 \value{
-string html object with a tweet's text, username, and user avatar
+prints a tweet html object to be embedded in R markdown.
 }
 \description{
 This function returns a tweet's text, the username, and the user's avatar wrapped in html code
@@ -20,7 +20,7 @@ your professor and your peers?
 You can do that by simply calling the functions from this package.
 }
 \note{
-tweet id can be obtained from the link to a tweet. Example: "https://twitter.com/STAT545/status/506900131086880768"
+Tweet id can be obtained from the link to a tweet. Example: "https://twitter.com/STAT545/status/506900131086880768". The markdown chunk must have results = 'asis'.
 }
 \examples{
 embedTweet(id = "506900131086880768")

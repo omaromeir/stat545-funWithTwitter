@@ -9,10 +9,10 @@ authenticate()
 \item{none}{}
 }
 \value{
-nothing
+oauth signature object to be used in future requests
 }
 \description{
-This function authenticates with the twitter api
+This function authenticates with the twitter api using the `httr` package.
 }
 \keyword{misc}
 

@@ -2,3 +2,4 @@
 
 export(embedTweet)
 export(getTweet)
+export(getUserTimeline)
