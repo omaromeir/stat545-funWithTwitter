@@ -29,6 +29,7 @@ To load the package you have to call `library(funWithTwitter)` without the "stat
 
 The report for this homework along with more fleshed out examples and reflections can be found within the vignette of the package. This vignette can be previewed in two ways:
 
-* Load the package then load the vignette like this: `browseVignettes(package = "funWithTwitter")`. **THIS IS THE PREFERRED METHOD**.
-* Look at the markdown file directly, here's a [link](). **The css for tweets does not work here.**
+* **THIS IS THE PREFERRED METHOD**. Load the package then load the vignette like this: `browseVignettes(package = "funWithTwitter")`.
+
+* **DO NOT DO THIS UNLESS THE ABOVE METHOD DOES NOT WORK** Look at the markdown file directly, here's a [link](https://github.com/omaromeir/stat545-funWithTwitter/blob/master/vignettes/overview.md). **The css for tweets does not work here making everything look worse.**
 
